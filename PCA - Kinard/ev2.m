@@ -5,15 +5,15 @@ function y = ev2(lambda,L, beta, evals)
 
 m = length(lambda) + 1;
 evects = zeros(m,m);
-for i = l:m
-    for j = l:m
+for i = 1:m
+    for j = 1:m
         if i == 1
             evects(i,j) = 1;
         end
         if i~= 1
-            mu = beta(i-l)/L;
-            evects(i,j) = mu / (lambda(i-l) + evals(j));
+            mu = beta(i-1)/L;
+            evects(i,j) = mu / (lambda(i-1) + evals(j));
         end
     end
 end
-y = evects; 
+y = evects;

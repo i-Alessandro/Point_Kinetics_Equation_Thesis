@@ -5,19 +5,19 @@ function y = expand(lambda)
 % derive the coefficients.
 % Determines the number of iterations, as well as the degree
 % of the polynomial in question
-m = length(Icimbda);
-coeff = zeros(m+l,1);
+m = length(lambda);%m = length(Icimbda);
+coeff = zeros(m+1,1);
 % A temporary variable is necessary b/c the iterations that follow
 % require information from the previous iteration. . .
 temp = coeff;
 % Must run the index to m+l b/c MATLAB uses a 1-based index
-for i= l:m+l
+for i= 1:m+1
     if i ~= 1
-        coeff(1) = temp(l) * lambda(i-1);
-        for j = 2:m+l
-            coeff (j) = temp(j)*lambda(i-l) + temp(j-l);
+        coeff(1) = temp(1) * lambda(i-1);
+        for j = 2:m+1
+            coeff (j) = temp(j)*lambda(i-1) + temp(j-1);
             if j == i-1
-                coeff (j) = temp(j-l) + lambda(i-l);
+                coeff (j) = temp(j-1) + lambda(i-1);
             end
         end
     end

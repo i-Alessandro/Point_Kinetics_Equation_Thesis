@@ -4,7 +4,7 @@ eps = 1;
 x = val;
 deriv = myDeriv(poly);
 while eps > tol
-temp = X - (myEval(poly,x) / myEval(deriv, x));
+temp = x - (myEval(poly,x) / myEval(deriv, x));
 eps = abs(x - temp);
 x = temp;
 end 

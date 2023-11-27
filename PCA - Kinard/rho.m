@@ -11,7 +11,7 @@ if case_number == 1
 result = .003;
 end
 if case_number == 2
-result = .0055;
+result = .007; %0.0055
 end
 if case_number == 3
 result = 0.1*beta_sum*t;
